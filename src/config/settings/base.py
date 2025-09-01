@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "phonenumber_field",
     "rosetta",
     # apps
+    "apps.core.apps.CoreConfig",
 ]
 
 MIDDLEWARE = [

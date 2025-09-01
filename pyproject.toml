@@ -19,16 +19,3 @@ fix = true
 [tool.ruff.lint]
 select = ["E", "F", "B", "I"]
 ignore = ["F403", "F405", "E501"]
-
-
-[tool.mypy]
-python_version = 3.13
-strict = true
-ignore_missing_imports = true
-show_error_codes = true
-pretty = true
-exclude = "tests/"
-
-[build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"

@@ -6,8 +6,8 @@
 |------|------------------------------------|--------|
 | 1️⃣   | Project Configuration              | 🎯     |
 | 2️⃣   | Code Quality & Testing Tools       | 🎯     |
-| 3️⃣   | Core App Implementation            | 🔗     |
-| 4️⃣   | Account App                        |    📌    |
+| 3️⃣   | Core App Implementation            | 🎯     |
+| 4️⃣   | Account App                        |    🔗    |
 | 5️⃣   | Catalog App                        |     📌   |
 | 6️⃣   | Order App                          |     📌   |
 | 7️⃣   | Realtime App                       |     📌   |
