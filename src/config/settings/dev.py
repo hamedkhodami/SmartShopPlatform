@@ -1,14 +1,16 @@
-from .base import BASE_DIR, DEFAULT_JWT_CONFIG
-from datetime import timedelta
 import os
+from datetime import timedelta
+
+from .base import BASE_DIR, DEFAULT_JWT_CONFIG
+
 # ----------------------------------------------------------------
 
 
 # --DATABASES-----------------------------------------------------
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.getenv('SQLITE_PATH', BASE_DIR.parent / 'db.sqlite3'),
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.getenv("SQLITE_PATH", BASE_DIR.parent / "db.sqlite3"),
     }
 }
 # ----------------------------------------------------------------
