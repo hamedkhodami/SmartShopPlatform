@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "rosetta",
     # apps
     "apps.core.apps.CoreConfig",
+    "apps.account.apps.AccountConfig",
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 # ----------------------------------------------------------------
 
 
-# ---Auth---------------------------------------------------------
+# ---Auth Password Validators---------------------------------------------------------
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -168,6 +169,39 @@ API_URL_LABEL = "api"
 # ---------------------------------------------------------------
 
 
+# ---Auth-------------------------------------------------------
+PHONENUMBER_DEFAULT_REGION = "IR"
+
+AUTH_USER_MODEL = "account.User"
+
+LOGIN_URL = "/u/login"
+
+LOGIN_OTP_CONFIG = {
+    "TIMEOUT": 180,  # by sec
+    "CODE_LENGTH": 6,
+    "STORE_BY": "otp_auth_phonenumber_{}",  # redis key
+}
+
+USER_OTP_CONFIG = {
+    "TIMEOUT": 180,  # by sec
+    "CODE_LENGTH": 4,
+    "STORE_BY": "user_otp_auth_phonenumber_{}",  # redis key
+}
+
+RESET_PASSWORD_CONFIG = {
+    "TIMEOUT": 180,  # by sec
+    "CODE_LENGTH": 4,
+    "STORE_BY": "reset_password_phonenumber_{}",  # redis key
+}
+
+CONFIRM_PHONENUMBER_CONFIG = {
+    "TIMEOUT": 180,  # by sec
+    "CODE_LENGTH": 4,
+    "STORE_BY": "confirm_phonenumber_{}",  # redis key
+}
+# ---------------------------------------------------------------
+
+
 # ---REST_FRAMEWORK----------------------------------------------
 REST_FRAMEWORK = {
     "EXCEPTION_HANDLER": "apps.core.exceptions.custom_exception_handler",
@@ -181,9 +215,9 @@ REST_FRAMEWORK = {
         "rest_framework.parsers.JSONParser",
         "rest_framework.parsers.MultiPartParser",
     ],
-    #    'DEFAULT_AUTHENTICATION_CLASSES': [
-    #        'apps.account.auth.authentication.BaseJWTAuthentication',
-    #    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "apps.account.auth.authentication.BaseJWTAuthentication",
+    ],
 }
 # ---------------------------------------------------------------
 

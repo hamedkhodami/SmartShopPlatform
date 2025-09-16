@@ -12,18 +12,18 @@ F5:
 
 ## 🧭 Phase 1 Roadmap
 
-| Step | Title                              | Description                                                                 |
-|------|------------------------------------|-----------------------------------------------------------------------------|
-| 1️⃣   | Project Configuration              | Set up Django settings, environment management, and modular structure.     |
-| 2️⃣   | Code Quality & Testing Tools       | Integrate tools like black, ruff, mypy, pre-commit, and pytest.   |
-| 3️⃣   | Core App Implementation            | Build reusable base models, mixins, and utilities.                         |
-| 4️⃣   | Account App                        | Implement custom user model, authentication, and related APIs.             |
-| 5️⃣   | Catalog App                        | Create product, category, and attribute models with full API coverage.     |
-| 6️⃣   | Order App                          | Develop order management, payment logic, and transactional integrity.       |
-| 7️⃣   | Realtime App                       | Integrate Django Channels for WebSocket-based real-time features.          |
-| 8️⃣   | Notification App                   | Build notification system (email, SMS, WebSocket) with delivery tracking.  |
-| 9️⃣   | Phase 2 Planning                   | Define goals and scope for the next phase of development.                  |
-| 🔟   | Conclusion                          | Summarize achievements, challenges, and lessons learned.                   |
+| Step | Title                              | Description                                                               |
+|------|------------------------------------|---------------------------------------------------------------------------|
+| 1️⃣   | Project Configuration              | Set up Django settings, environment management, and modular structure.   |
+| 2️⃣   | Code Quality & Testing Tools       | Integrate tools like black, ruff, mypy, pre-commit, and pytest. |
+| 3️⃣   | Core App Implementation            | Build reusable base models, mixins, and utilities.                       |
+| 4️⃣   | Account App                        | Implement custom user model, authentication.           |
+| 5️⃣   | Catalog App                        | Create product, category.     |
+| 6️⃣   | Order App                          | Develop order management, payment logic, and transactional integrity.     |
+| 7️⃣   | Realtime App                       | Integrate Django Channels for WebSocket-based real-time features.        |
+| 8️⃣   | Notification App                   | Build notification system (email, SMS, WebSocket) with delivery tracking. |
+| 9️⃣   | Phase 2 Planning                   | Define goals and scope for the next phase of development.                |
+| 🔟   | Conclusion                          | Summarize achievements, challenges, and lessons learned.                 |
 
 ---
 
@@ -55,8 +55,6 @@ F5:
 
 ### 5. Catalog App
 - Product, Category, Feature models
-- Filtering, pagination, and search APIs
-- Serializer and viewset tests
 
 ### 6. Order App
 - Order, OrderItem, Payment models
